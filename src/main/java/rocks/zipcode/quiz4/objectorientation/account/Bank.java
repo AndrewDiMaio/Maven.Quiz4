@@ -1,17 +1,22 @@
 package rocks.zipcode.quiz4.objectorientation.account;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
+
 /**
  * @author leon on 27/12/2018.
  */
 public class Bank {
-    public BankAccount removeBankAccountByIndex(Integer indexNumber) {
-        return null;
+    LinkedList<BankAccount> bankList = new LinkedList<>();
+    public boolean removeBankAccountByIndex(Integer indexNumber) {
+        return bankList.remove(indexNumber);
     }
 
     public void addBankAccount(BankAccount bankAccount) {
+        bankList.add(bankAccount);
     }
 
     public Boolean containsBankAccount(BankAccount bankAccount) {
-        throw new UnsupportedOperationException("Method not yet implemented");
+        return bankList.contains(bankAccount);
     }
 }
